@@ -12,7 +12,7 @@ import { catchError } from 'rxjs/operators';
   providedIn: 'root',
 })
 export class PricingConfigurationService {
-  private apiUrl = 'http://localhost:3000'; // Replace with your Nest.js API URL
+  private apiUrl = 'http://localhost:3000'; 
 
   constructor(private http: HttpClient) {}
 
@@ -27,8 +27,6 @@ addPricingConfiguration(pricingConfiguration: AddPricingtConfiguration): Observa
       })
     };
 
-    // Make sure pricingConfiguration matches the data structure expected by the Nest.js API
-    // You may need to update the field names based on the API's requirements
     const requestBody = {
       NAME: pricingConfiguration.NAME,
       DBP: pricingConfiguration.DBP,
