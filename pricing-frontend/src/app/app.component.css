@@ -1,0 +1,24 @@
+nav {
+    background: linear-gradient(45deg, #007bff, #00bfff, #00ffbf);
+    padding: 10px;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 18px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  nav a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  nav a.active {
+    background-color: rgba(255, 255, 255, 0.1);
+    font-weight: bold;
+  }
+  

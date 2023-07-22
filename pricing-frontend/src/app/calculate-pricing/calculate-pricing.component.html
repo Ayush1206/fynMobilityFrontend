@@ -1,1 +1,34 @@
-<p>calculate-pricing works!</p>
+<div class="container">
+    <h2>Calculate Pricing</h2>
+    <form (submit)="calculatePricing()">
+      <div class="form-group">
+        <label for="DBP">Distance Base Price:</label>
+        <input type="number" id="DBP" name="DBP" [(ngModel)]="calculateRequest.DBP">
+      </div>
+      <div class="form-group">
+        <label for="Dn">Additional Distance:</label>
+        <input type="number" id="Dn" name="Dn" [(ngModel)]="calculateRequest.Dn">
+      </div>
+      <div class="form-group">
+        <label for="DAP">Distance Additional Price:</label>
+        <input type="number" id="DAP" name="DAP" [(ngModel)]="calculateRequest.DAP">
+      </div>
+      <div class="form-group">
+        <label for="Tn">Total Time (in hours):</label>
+        <input type="number" id="Tn" name="Tn" [(ngModel)]="calculateRequest.Tn">
+      </div>
+      <div class="form-group">
+        <label for="TMF">Time Multiplier Factor:</label>
+        <input type="number" id="TMF" name="TMF" [(ngModel)]="calculateRequest.TMF">
+      </div>
+      <div class="form-group">
+        <label for="WC">Waiting Charges:</label>
+        <input type="number" id="WC" name="WC" [(ngModel)]="calculateRequest.WC">
+      </div>
+      <button type="submit" class="btn btn-primary">Calculate Price</button>
+    </form>
+    <div *ngIf="calculatedPrice !== null" class="result">
+      <h3>Calculated Price: {{ calculatedPrice | currency:'INR':'symbol':'1.2-2' }}</h3>
+    </div>
+  </div>
+  
