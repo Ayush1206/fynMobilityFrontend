@@ -7,13 +7,17 @@ import { PricingConfiguration } from './pricing-configuration.model';
   providedIn: 'root',
 })
 export class PricingConfigurationService {
-  private apiUrl = 'http://localhost:3000'; // Replace with your Nest.js API URL
+  private apiUrl = 'http://localhost:3000';
 
   constructor(private http: HttpClient) {}
 
   getAllPricingConfigurations(): Observable<PricingConfiguration[]> {
+    console.log("logging the results");
+    console.log(this.http.get<PricingConfiguration[]>(`${this.apiUrl}/pricing`));
+    
+    
     return this.http.get<PricingConfiguration[]>(`${this.apiUrl}/pricing`);
   }
 
-  // Add other methods for creating, updating, and deleting pricing configurations if needed
+  
 }
