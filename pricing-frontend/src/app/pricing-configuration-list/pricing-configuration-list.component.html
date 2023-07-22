@@ -1,0 +1,6 @@
+<h2>Pricing Configurations</h2>
+<ul>
+  <li *ngFor="let config of pricingConfigurations">
+    {{ config.name }} - Base Price: {{ config.distanceBasePrice }}, Additional Price: {{ config.distanceAdditionalPrice }}, TMF: {{ config.timeMultiplierFactor }}, WC: {{ config.waitingCharges }}
+  </li>
+</ul>
